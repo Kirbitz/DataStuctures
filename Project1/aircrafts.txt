@@ -1,0 +1,17 @@
+Gulfstream GV
+Gulfstream
+5910
+91000
+13
+
+Global 6000
+Bombardier
+6476
+99500
+12
+
+Falcon 7X
+Dassault
+5506
+68998
+15
