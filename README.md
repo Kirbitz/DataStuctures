@@ -1,2 +1,2 @@
 # DataStuctures
-Code from my Data Structures Course
+A list of all my projects from Data Stuctures
