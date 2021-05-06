@@ -1,0 +1,4 @@
+﻿  ArraySequence.cpp
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project6-ArraySequence\CS244-Project6-ArraySequence\ArraySequence.cpp(219): warning C4715: 'ArraySequenceE<char>::indexOf': not all control paths return a value
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project6-ArraySequence\CS244-Project6-ArraySequence\ArraySequence.cpp(179): warning C4715: 'ArraySequenceE<char>::at': not all control paths return a value
+  CS244-Project6-ArraySequence.vcxproj -> C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project6-ArraySequence\Debug\CS244-Project6-ArraySequence.exe
