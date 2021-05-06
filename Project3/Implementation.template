@@ -1,0 +1,101 @@
+#ifndef Template_T
+#define Template_T
+
+#include <iostream>
+#include <string>
+#include <ctime>
+#include "varList.h"
+
+using namespace std;
+
+
+template <class T>
+VarList<T>::VarList() { // void constructor
+	size = 0;
+	dArray = new T[size];
+}
+
+template <class T>
+int VarList<T>::check(T key) { // returns index of element holding "key" or -1 if none
+	if(size > 0){
+		for (int i = 0; i < size; i++) {
+			if (dArray[i] == key)
+				return i;
+		}
+	}
+	return -1;
+}
+
+template <class T>
+void VarList<T>::addValue(T element) {    // adds number to the array
+	if (check(element) == -1) {
+		T* tempArray = new T[size + 1];
+		for (int i = 0; i < size; i++) {
+			tempArray[i] = dArray[i];
+		}
+		tempArray[size] = element;
+		size++;
+		delete[] dArray;
+		dArray = tempArray;
+	}
+	printList();
+}
+
+template <class T>
+void VarList<T>::removeValue(T element) { // deletes the number from the array
+	int index = check(element);
+	if (index != -1) {
+		size--;
+		T* tempArray = new T[size];
+		for (int i = 0; i < size; i++) {
+			if (i < index) {
+				tempArray[i] = dArray[i];
+			}
+			else {
+				tempArray[i] = dArray[i + 1];
+			}
+		}
+		delete[] dArray;
+		dArray = tempArray;
+	}
+	printList();
+}
+
+template <class T>
+void VarList<T>::printList() {      // prints the values of the array
+	cout << dArray[0];
+	for (int i = 1; i < size; i++) {
+		cout << ", " << dArray[i];
+	}
+	cout << endl;
+}
+
+template <class T>
+//// big three rule
+VarList<T>::VarList<T>(const VarList<T>& org) { // copy constructor
+	size = org.getSize();
+	dArray = new T[size];
+	for (int i = 0; i < size; i++) {
+		dArray[i] = org.dArray[i];
+	}
+}
+
+template <class T>
+VarList<T>& VarList<T>::operator=(const VarList<T>& rhs) { // overloaded assignment
+	if(this != &rhs){
+		this->size = rhs.size;
+		delete[] this->dArray;
+		this->dArray = new T[this->size];
+		for (int i = 0; i < this->size; i++) {
+			this->dArray[i] = rhs.dArray[i];
+		}
+	}
+	return *this;
+}
+
+template <class T>
+VarList<T>::~VarList() { // destructor
+	delete[] dArray;
+}
+
+#endif

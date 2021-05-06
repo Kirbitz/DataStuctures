@@ -1,0 +1,8 @@
+﻿  testMain.cpp
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\Implementation.template(75,47): warning C4812: obsolete declaration style: please use 'VarList<T>::VarList' instead
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\testMain.cpp(13,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\Implementation.template(75,47): warning C4812: obsolete declaration style: please use 'VarList<char>::VarList' instead
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\Implementation.template(75): message : while compiling class template member function 'VarList<char>::VarList(const VarList<char> &)'
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\testMain.cpp(126): message : see reference to function template instantiation 'VarList<char>::VarList(const VarList<char> &)' being compiled
+C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\CS244-Project3-Templates\testMain.cpp(14): message : see reference to class template instantiation 'VarList<char>' being compiled
+  CS244-Project3-Templates.vcxproj -> C:\Users\MarefkeTyler\source\repos\CS244\CS244-Project3-Templates\Debug\CS244-Project3-Templates.exe
